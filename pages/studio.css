@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap');
+
+*{
+    height: auto;
+    color: #000;
+    font-family: 'PT Sans Caption', sans-serif;
+   
+    background-color: #f7f4f0;
+    
+}
+
+
+body{
+    overflow-y: hidden;
+}
+/*-------------Navbar--------------*/
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    height: 2rem;
+    font-size: 29px;
+ 
+}
+
+li,a{
+    text-decoration: none;
+    list-style: none;
+   
+}
+
+/*-----------main-------------*/
+
+.text{
+
+    font-size: calc(3vw + 3.5vh + 1.75vmin);
+    line-height: 1.4;
+    display: flex;
+   
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+}
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    
+    
+}
+
+
+/*------silde-------*/
+
+.block {
+    position: relative;
+    width: 580px;
+    height: 560px;
+    margin: 10px 300px 20px 80px;
+    border: solid black;
+    transform: translateY(-100%) rotateZ(-30deg);
+}
+
+.block-1 {
+    background: url(../assets/studio.png) no-repeat 50% 50%;
+    background-size: cover;
+    
+}
+
+
+
+  
+
+

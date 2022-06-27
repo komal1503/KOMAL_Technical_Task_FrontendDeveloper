@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ad.css">
+<link rel="stylesheet" href="preloader.css">
+</head>
+
+<body>
+
+    <div class="loader">
+        <img src="../assets/297.gif" alt="">
+      </div>
+
+    <ul>
+        <div class="navbar">
+        <li><a href="../index.html">ACCUEIL</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="studio.html">STUDIO</a></li>
+        <li><a href="">EXPERIENCE</a></li>
+    </div>
+    </ul>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="main1">
+                <div class="text1">
+                    <li class="head1">Care for colors</li>
+                    <li class="head2"> Fusalp & The Woolmark Company : Brand content</li>
+                </div>
+
+                <img class="img1"
+                    src="https://lamadone.studio/static/medias/images/works/care_for_colors/care_for_colors--main_landscape.jpg"
+                    alt="">
+            </div>
+            <div class="bottom">
+                <a class="next" onclick="plusSlides(1)">page 02</a>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="main2">
+
+                <li class="production"> Directed by — Aimé & Honoré Lamadone Production and Art Direction</li>
+                <li class="production">Production and Art Direction — Studio Lamadone</li>
+                <li class="production">Cinematography — James Coote & Baptiste Malbéqui</li>
+                <li class="production">Camera Assistant — Sepehr Azadi</li>
+                <li class="production">Loader — Manon Delville</li>
+                <li class="production">Gaffer — Tom Haffner & Adrien Lallau</li>
+                <li class="production">Electrician — Vanille Davy Key</li>
+                <li class="production">Grip — Pauline Courquin</li>
+                <li class="production">Best Boy — Maxime Aubry</li>
+                <li class="production">Camera — Les Mauvaises Filles & Camera Set</li>
+                <li class="production">Light & Grip — Cininter & Cicar</li>
+                <li class="production">Models — Marthe Woertman & Jakob Scheich</li>
+                <li class="production">Hair & Make-up — Jade Berrocal</li>
+                <li class="production">Stylist — Jean-Marc Masala</li>
+                <li class="production">Colorist — Florian Martiny</li>
+                <li class="production">Music — Velour.bleu</li>
+                <li class="production">Special Thanks — Vogue Paris — Studio51 — Silverway Paris — Félix Le Blanc </li>
+                <li class="production">— Jules Roeser</li>
+
+            </div>
+
+            <div class="bottom">
+                <a class="prev" onclick="plusSlides(-1)">page 01</a>
+                <a class="next" onclick="plusSlides(1)">page 03</a>
+            </div>
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="main3">
+                <video class="vid" width="500" height="auto" controls>
+                    <source
+                        src="https://lamadone.studio/static/medias/videos/works/care_for_colors/care_for_colors--video_short.webm"
+                        type="video/mp4">
+
+                </video>
+
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">page 02</a>
+            <a class="next" onclick="plusSlides(1)">page 04</a>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="main4">
+                <img class="img2"
+                    src="https://lamadone.studio/static/medias/images/works/care_for_colors/care_for_colors--01.jpg"
+                    alt="">
+                <img class="img2"
+                    src="https://lamadone.studio/static/medias/images/works/care_for_colors/care_for_colors--02.jpg"
+                    alt="">
+                <img class="img2"
+                    src="https://lamadone.studio/static/medias/images/works/care_for_colors/care_for_colors--03.jpg"
+                    alt="">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">page 03</a>
+        </div>
+    </div>
+
+
+
+
+    <!--slider-->
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+
+
+    <!--preloader-->
+<script src="./preloader.js"></script>
+</body>
+
+</html>
